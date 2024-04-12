@@ -11,5 +11,7 @@
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.wordWrapColumn": 100,
+  "editor.wordWrap": "on"
 }
