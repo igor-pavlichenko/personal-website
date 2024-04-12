@@ -1,11 +1,12 @@
 ---
 import '../app.css';
-import SkillsList from '../components/skills/SkillsList.astro';
+import LeftSection from '../components/left-section/LeftSection.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="@container">
+  <main class="@container flex flex-row dark:bg-gray-900">
+    <LeftSection />
     <section>
       <h1 class="mb-2 text-2xl">hey, I'm Igor Pavlichenko</h1>
 
@@ -16,10 +17,6 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </section>
 
-    <section class="my-4">
-      <h2 class="mb-2 text-xl">Skills</h2>
-
-      <SkillsList />
-    </section>
+    <section class="my-4"></section>
   </main>
 </Layout>
