@@ -1,0 +1,21 @@
+---
+import Skill from './Skill.astro';
+import { skills } from './skills';
+---
+
+<ul>
+  {
+    skills.map((item) => {
+      if (typeof item === 'string') return <Skill label={item} />;
+      else {
+        return item.map((skill, index) => (
+          <>
+            <Skill label={skill} class="inline-flex" />
+            {index !== item.length - 1 && <span class="mx-0.5/2">&middot;</span>}
+            {index === item.length - 1 && <br />}
+          </>
+        ));
+      }
+    })
+  }
+</ul>

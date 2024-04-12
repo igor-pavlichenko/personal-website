@@ -1,0 +1,18 @@
+---
+import { twMerge } from 'tailwind-merge';
+interface Props {
+  label: string;
+  class?: string;
+}
+
+const { class: classFromProps, label } = Astro.props;
+---
+
+<li
+  class={twMerge(
+    'max-w-fit rounded border border-neutral-200 bg-neutral-50 px-1 text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mb-1.5',
+    classFromProps,
+  )}
+>
+  {label}
+</li>

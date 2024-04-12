@@ -1,0 +1,17 @@
+export const skills = [
+  ['React.js', 'Vite.js'],
+  ['TypeScript', 'JavaScript'],
+  ['HTML5', 'CSS', 'tailwindcss'],
+  'Greenfield Development',
+  'Git',
+  ['Unit Testing', 'Jest', 'Vitest'],
+  ['Rest APIs', 'React-Query', 'Axios'],
+  ['Agile', 'SCRUM', 'Jira', 'BDD'],
+  'Team management & leadership',
+  'Communication',
+  'Problem solving',
+  'Stress resilience',
+  'Responsibility',
+  'Enthusiasm',
+  'Teamwork',
+];
