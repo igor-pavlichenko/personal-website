@@ -4,7 +4,11 @@ import meDarkImage from './me-clipped-dark.png';
 ---
 
 <div
-  class="mt-2 mx-auto h-56 w-56 overflow-hidden rounded-full bg-zinc-950 opacity-70 dark:overflow-auto dark:rounded-none dark:bg-black dark:opacity-100"
+  class="relative mx-auto overflow-hidden rounded-l-xl bg-black opacity-70 dark:overflow-auto dark:rounded-none dark:bg-black dark:opacity-100"
 >
-  <Image src={meDarkImage} alt="picture of me on a dark background" class="-ml-1 w-56" />
+  <Image src={meDarkImage} alt="picture of me on a dark background" class="-ml-1" />
+  <div
+    class="absolute top-0 right-0 h-full w-28 bg-gradient-to-l from-gray-200 to-transparent dark:hidden"
+  >
+  </div>
 </div>
