@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="bg-gray-100 text-slate-800 dark:bg-slate-800 dark:text-gray-100">
+<html lang="en" class="bg-gray-100 text-gray-800 dark:bg-zinc-950 dark:text-gray-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -19,7 +19,7 @@ const { title } = Astro.props;
 
     <title>{title}</title>
   </head>
-  <body class="mx-2 my-4 max-w-2xl antialiased sm:my-8 sm:mx-auto">
+  <body class="mx-2 my-4 max-w-4xl antialiased sm:my-8 sm:mx-auto">
     <Navigation />
     <slot />
   </body>

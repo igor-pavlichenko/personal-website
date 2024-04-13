@@ -1,9 +1,15 @@
 ---
 import Skill from './Skill.astro';
 import { skills } from './skills';
+
+interface Props {
+  class: string;
+}
+
+const { class: classFromProps } = Astro.props;
 ---
 
-<ul>
+<ul class={classFromProps}>
   {
     skills.map((item) => {
       if (typeof item === 'string') return <Skill label={item} />;
