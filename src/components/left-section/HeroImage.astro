@@ -1,6 +1,16 @@
 ---
 import { Image } from 'astro:assets';
-import meImage from './me-dark-bg.jpg';
+import meDarkImage from './me-dark-bg.jpg';
+import meLightImage from './me-light-bg.png';
 ---
 
-<Image src={meImage} alt="picture of me on a dark background" />
+<Image
+  src={meDarkImage}
+  alt="picture of me on a dark background"
+  class="mt-2 mx-auto hidden w-56 dark:block"
+/>
+<Image
+  src={meLightImage}
+  alt="picture of me on a dark background"
+  class="ml-4 block h-56 w-auto drop-shadow-2xl dark:hidden"
+/>

@@ -1,15 +1,29 @@
 ---
+import Skill from '../skills/Skill.astro';
 import SkillsList from '../skills/SkillsList.astro';
 import { hardSkills, softSkills } from '../skills/skills';
 import HeroImage from './HeroImage.astro';
 ---
 
-<div class="w-3xl bg-black">
+<div class="w-3xl bg-gray-200 pt-2 pb-10 dark:bg-black">
   <HeroImage />
-  <div class="px-3">
-    <h2 class="mb-4 text-2xl uppercase tracking-widest">Skills</h2>
 
-    <SkillsList class="text-sm" list={hardSkills} />
-    <SkillsList class="mt-4 text-sm" list={softSkills} />
+  <div class="pl-6">
+    <section>
+      <h2 class="mb-4 text-2xl uppercase tracking-widest">Skills</h2>
+
+      <SkillsList class="text-sm" list={hardSkills} />
+      <SkillsList class="mt-4 text-sm" list={softSkills} />
+    </section>
+
+    <section class="mt-10">
+      <h2 class="mb-4 text-2xl uppercase tracking-widest">Language</h2>
+      <ul class="text-sm">
+        <Skill label="Portuguese" />
+        <!-- TODO: need to have a dimmed note for each language -->
+        <Skill label="Russian" />
+        <Skill label="English" />
+      </ul>
+    </section>
   </div>
 </div>
