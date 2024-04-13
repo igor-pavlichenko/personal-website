@@ -1,4 +1,4 @@
-export const skills = [
+export const hardSkills = [
   ['React.js', 'Vite.js'],
   ['TypeScript', 'JavaScript'],
   ['HTML5', 'CSS', 'tailwindcss'],
@@ -7,7 +7,8 @@ export const skills = [
   ['Unit Testing', 'Jest', 'Vitest'],
   ['Rest APIs', 'React-Query', 'Axios'],
   ['Agile', 'SCRUM', 'Jira', 'BDD'],
-  'Team management & leadership',
+];
+export const softSkills = [
   'Communication',
   'Problem solving',
   'Stress resilience',
@@ -15,3 +16,5 @@ export const skills = [
   'Enthusiasm',
   'Teamwork',
 ];
+
+export type SkillsArray = typeof hardSkills | typeof softSkills;
