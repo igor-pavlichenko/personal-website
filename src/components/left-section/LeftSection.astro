@@ -1,11 +1,18 @@
 ---
+import { twMerge } from 'tailwind-merge';
 import SkillsList from '../skills/SkillsList.astro';
 import { hardSkills, softSkills } from '../skills/skills';
 import HeroImage from './HeroImage.astro';
 import LanguageSection from './language-section/LanguageSection.astro';
+
+interface Props {
+  class: string;
+}
+
+const { class: classFromProps } = Astro.props;
 ---
 
-<div class="w-3xl bg-gray-200 pt-6 px-6 pb-10 shadow-xl dark:bg-black">
+<div class={twMerge('w-3xl bg-gray-200  shadow-xl dark:bg-black', classFromProps)}>
   <HeroImage />
 
   <div class="mt-10">
