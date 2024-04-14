@@ -3,6 +3,7 @@ import '../app.css';
 import HeroIntro from '../components/HeroIntro.astro';
 import HeroImage from '../components/hero-image/HeroImage.astro';
 import LeftSection from '../components/left-section/LeftSection.astro';
+import SkillsList from '../components/left-section/skills/SkillsList.astro';
 import SectionTitle from '../components/typography/SectionTitle.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -20,6 +21,54 @@ import Layout from '../layouts/Layout.astro';
       <LeftSection class="w-76 min-w-76 h-full p-6" />
       <section class="p-6">
         <SectionTitle>Experience</SectionTitle>
+        <article aria-label="job">
+          <h3 class="text-l font-bold uppercase">Senior Frontend Engineer</h3>
+          <p class="text-sm" aria-label="company">
+            <a class="inline-block underline" href="https://www.circl.solutions/">CIRCL</a>
+            <span class="mx-0.5/2">&middot;</span>
+            <span>Full-time</span>
+            <span class="mx-0.5/2">&middot;</span>
+            <span>Remote</span>
+          </p>
+          <p class="text-sm" aria-label="duration">
+            <span>Nov 2023 - Mar 2024</span>
+            <span class="mx-0.5/2">&middot;</span>
+            <span>5 mos</span>
+          </p>
+          <p class="pt-3 leading-relaxed" aria-label="description">
+            Company needed to rebuild a huge monorepo-microfrontends legacy app. The challenge here
+            was to integrate sections from legacy app into new app while it catches-up
+            features-wise. The least “expensive” option was to use an iframe and develop a small
+            communication protocol using postMessage.
+          </p>
+          <SkillsList
+            class="mt-2 text-xs"
+            list={[
+              [
+                'React.js',
+                'TypeScript',
+                'CSS',
+                'Websocket',
+                'Monorepo',
+                'Microfrontends',
+                'Iframe',
+                'Git',
+                'Vite.js',
+              ],
+            ]}
+          />
+        </article>
+        <article class="mt-4">
+          <h3 class="text-l font-bold uppercase">Senior Frontend Engineer</h3>
+          <a href="https://alviere.com/">Alviere</a><span></span>
+          <p class="pt-3 leading-relaxed" aria-label="description">
+            Layoffs happened, teams were restructured. mixed teams, vertical story slicing,
+            challenging story-points estimation introduced eslint rules and IDE automations to make
+            our code more consistent migrated the whole project from CRA to Vite.js which allowed us
+            to: finally move to latest React + Typescript versions get rid of a ton of npm
+            vulnerabilities speed up our CI/CD pipelines by 100%
+          </p>
+        </article>
       </section>
     </div>
   </main>

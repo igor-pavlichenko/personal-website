@@ -3,8 +3,8 @@ import Skill from './Skill.astro';
 import type { SkillsArray } from './skills';
 
 interface Props {
-  class: string;
-  list: SkillsArray;
+  class?: string;
+  list: SkillsArray; // skills inside an array will be inlined
 }
 
 const { class: classFromProps, list } = Astro.props;
