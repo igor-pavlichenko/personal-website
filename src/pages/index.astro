@@ -1,22 +1,22 @@
 ---
 import '../app.css';
+import HeroIntro from '../components/HeroIntro.astro';
+import HeroImage from '../components/hero-image/HeroImage.astro';
 import LeftSection from '../components/left-section/LeftSection.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Igor Pavlichenko, web developer">
-  <main class="@container flex flex-row shadow-2xl shadow-slate-700 dark:bg-gray-950">
-    <LeftSection class="pt-8 px-6 pb-10" />
-    <section class="p-6 pt-8">
-      <h1 class="font-hero mb-2 text-7xl tracking-widest">Igor Pavlichenko</h1>
-      <h2 class="mb-4 text-2xl uppercase tracking-widest">web developer</h2>
-      <p class="leading-relaxed">
-        Hello! I am a web developer, mostly on front-end side, with over 6 years of experience,
-        based near Lisbon, Portugal. Passionate about programming, beautiful code and technology in
-        general. I can notice misalignments of 1 pixel.
-      </p>
-    </section>
+  <main class="@container flex flex-col shadow-2xl shadow-slate-700 dark:bg-gray-950">
+    <div class="flex flex-row">
+      <div class="w-76 min-w-76 bg-gray-200 p-6 dark:bg-black">
+        <HeroImage />
+      </div>
+      <HeroIntro />
+    </div>
 
-    <section class="my-4"></section>
+    <div class="flex flex-row">
+      <LeftSection class="w-76 min-w-76 h-full px-6 pb-10" />
+    </div>
   </main>
 </Layout>

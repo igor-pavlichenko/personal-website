@@ -1,9 +1,8 @@
 ---
 import { twMerge } from 'tailwind-merge';
-import SkillsList from '../skills/SkillsList.astro';
-import { hardSkills, softSkills } from '../skills/skills';
-import HeroImage from './HeroImage.astro';
 import LanguageSection from './language-section/LanguageSection.astro';
+import SkillsList from './skills/SkillsList.astro';
+import { hardSkills, softSkills } from './skills/skills';
 
 interface Props {
   class: string;
@@ -12,9 +11,7 @@ interface Props {
 const { class: classFromProps } = Astro.props;
 ---
 
-<div class={twMerge('w-3xl bg-gray-200  shadow-xl dark:bg-black', classFromProps)}>
-  <HeroImage />
-
+<div class={twMerge('bg-gray-200 dark:bg-black', classFromProps)}>
   <div class="mt-10">
     <section>
       <h2 class="mb-4 text-2xl uppercase tracking-widest">Skills</h2>
