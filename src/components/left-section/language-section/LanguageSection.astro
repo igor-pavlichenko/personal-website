@@ -1,4 +1,5 @@
 ---
+import SectionTitle from '../../typography/SectionTitle.astro';
 import Language from './Language.astro';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 ---
 
 <section class={Astro.props.class}>
-  <h2 class="mb-4 text-2xl uppercase tracking-widest">Language</h2>
+  <SectionTitle>Language</SectionTitle>
   <ul class="flex flex-col gap-1.5 text-sm">
     <Language name="Portuguese" comment="Native/Bilingual" />
     <Language name="Russian" comment="Native/Bilingual" />

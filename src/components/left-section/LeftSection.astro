@@ -1,5 +1,6 @@
 ---
 import { twMerge } from 'tailwind-merge';
+import SectionTitle from '../typography/SectionTitle.astro';
 import LanguageSection from './language-section/LanguageSection.astro';
 import SkillsList from './skills/SkillsList.astro';
 import { hardSkills, softSkills } from './skills/skills';
@@ -12,14 +13,12 @@ const { class: classFromProps } = Astro.props;
 ---
 
 <div class={twMerge('bg-gray-200 dark:bg-black', classFromProps)}>
-  <div class="mt-10">
-    <section>
-      <h2 class="mb-4 text-2xl uppercase tracking-widest">Skills</h2>
+  <section>
+    <SectionTitle>Skills</SectionTitle>
 
-      <SkillsList class="text-sm" list={hardSkills} />
-      <SkillsList class="mt-4 text-sm" list={softSkills} />
-    </section>
+    <SkillsList class="text-sm" list={hardSkills} />
+    <SkillsList class="mt-4 text-sm" list={softSkills} />
+  </section>
 
-    <LanguageSection class="mt-10" />
-  </div>
+  <LanguageSection class="mt-10" />
 </div>
