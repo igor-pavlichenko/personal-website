@@ -16,6 +16,7 @@
 @theme {
 	--breakpoint-3xl: 1920px;
 	--font-family-hero: 'BebasNeue', 'sans-serif';
+	--font-size-xxs: 0.625rem;
 }
 
 :root {

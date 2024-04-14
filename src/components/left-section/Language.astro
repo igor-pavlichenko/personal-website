@@ -1,0 +1,16 @@
+---
+interface Props {
+  name: string;
+  comment: string;
+}
+
+const { name, comment } = Astro.props;
+---
+
+<li>
+  <span
+    class={'max-w-fit rounded border px-1 dark:border-gray-800 dark:bg-gray-900 dark:text-neutral-100'}
+    >{name}</span
+  >
+  <span class="text-xxs ml-1 dark:text-gray-500">&lpar;{comment}&rpar;</span>
+</li>
