@@ -10,15 +10,15 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Igor Pavlichenko, web developer">
   <main class="@container flex flex-col shadow-2xl shadow-slate-700 dark:bg-gray-950">
-    <div class="flex flex-row">
-      <div class="w-76 min-w-76 bg-gray-200 p-6 pt-8 dark:bg-black">
+    <div class="flex flex-col sm:flex-row">
+      <div class="w-ful sm:w-76 min-w-76 order-1 bg-gray-200 p-6 pt-8 sm:order-none dark:bg-black">
         <HeroImage />
       </div>
       <HeroIntro />
     </div>
 
-    <div class="flex flex-row">
-      <LeftSection class="w-76 min-w-76 h-full p-6" />
+    <div class="flex flex-col sm:flex-row">
+      <LeftSection class="sm:w-76 min-w-76 h-full w-full p-6" />
       <section class="p-6">
         <SectionTitle>Experience</SectionTitle>
         <article aria-label="job">
