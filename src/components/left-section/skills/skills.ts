@@ -1,5 +1,5 @@
 export const hardSkills = [
-  ['React.js', 'Vite.js'],
+  ['React.js', 'Astro', 'Vite.js'],
   ['TypeScript', 'JavaScript'],
   ['HTML5', 'CSS', 'tailwindcss'],
   'Greenfield Development',
