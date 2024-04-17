@@ -1,0 +1,106 @@
+---
+import SectionTitle from '../typography/SectionTitle.astro';
+import Experience from './Experience.astro';
+---
+
+<section class="p-6">
+  <SectionTitle>Experience</SectionTitle>
+  <Experience
+    title="Senior Frontend Engineer"
+    companyName="CIRCL"
+    companyWebsite="https://www.circl.solutions/"
+    contractType="full-time"
+    workModel="remote"
+    startDate={new Date(2023, 10)}
+    endDate={new Date(2024, 4)}
+    skills={[
+      'React.js',
+      'TypeScript',
+      'CSS',
+      'Websocket',
+      'Monorepo',
+      'Microfrontends',
+      'Iframe',
+      'Git',
+      'Vite.js',
+    ]}
+  >
+    Company needed to rebuild a huge monorepo-microfrontends legacy app. The challenge here was to
+    integrate sections from legacy app into new app while it catches-up features-wise. The least
+    “expensive” option was to use an iframe and develop a small communication protocol using
+    postMessage.
+  </Experience>
+
+  <Experience
+    title="Senior Frontend Engineer"
+    companyName="Alviere"
+    companyWebsite="https://alviere.com/"
+    contractType="full-time"
+    workModel="remote"
+    startDate={new Date(2023, 3)}
+    endDate={new Date(2024, 9)}
+    skills={[
+      'React.js',
+      'TypeScript',
+      'CSS',
+      'REST APIs',
+      'React-Query',
+      'Axios',
+      'Git',
+      'Unit Testing',
+      'Jest',
+      'Vitest',
+      'Vite.js',
+    ]}
+  >
+    <p class="mb-2">Layoffs happened. Overnight we went from 4 frontend engineers to 2.</p>
+    <p class="mb-2">
+      A team of 1 lead + 1 developer wasn't making much sense so each of us was integrated into
+      backend teams to form mixed ones instead.
+    </p>
+    <p class="mb-2">
+      Backend &lt;-&gt; Frontend communication improved. Story slicing became vertical. Story points
+      estimation is slightly more challenging, but we learned to live with it.
+    </p>
+    My most important achievements during this period are developer experience related:
+    <ul class="ml-4 list-disc">
+      <li>introducing more eslint rules and IDE automations to make our code more consistent</li>
+      <li>
+        migrating the whole project from CRA to Vite.js, which allowed us to finally move to latest
+        React + Typescript versions and get rid of a ton of npm vulnerabilities. As a result we also
+        cut in half the time it takes to run our CI/CD pipelines
+      </li>
+    </ul>
+  </Experience>
+
+  <Experience
+    title="Lead Frontend Engineer"
+    companyName="Alviere"
+    companyWebsite="https://alviere.com/"
+    contractType="full-time"
+    workModel="remote"
+    startDate={new Date(2021, 10)}
+    endDate={new Date(2023, 3)}
+    skills={[
+      'Team Management',
+      'React.js',
+      'TypeScript',
+      'CSS',
+      'REST APIs',
+      'React-Query',
+      'Axios',
+      'Git',
+      'Unit Testing',
+      'Jest',
+    ]}
+  >
+    <p class="mb-2">
+      The number of frontend developers eventually grew from 1 to 4 so the company decided to form a
+      frontend team and make me it's "temporary" leader. It was going well enough so the search for
+      an experienced frontend lead lost priority over time.
+    </p>
+    During this period my team implemented a major redesign of the whole app, built a number of custom
+    components on top of MUI, integrated Storybook with Zeplin into the project, all while delivering
+    new features in a SCRUM environment.
+  </Experience>
+</section>

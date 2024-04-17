@@ -1,0 +1,59 @@
+---
+import { format, intervalToDuration } from 'date-fns';
+import SkillsList from '../left-section/skills/SkillsList.astro';
+
+interface Props {
+  title: string;
+  companyName: string;
+  companyWebsite: string;
+  contractType: 'full-time' | 'part-time';
+  workModel: 'remote' | 'hybrid' | 'onsite';
+  startDate: Date;
+  endDate: Date;
+  skills: Array<string>;
+}
+
+const { title, companyName, companyWebsite, contractType, workModel, startDate, endDate, skills } =
+  Astro.props;
+
+const { years, months, days } = intervalToDuration({
+  start: startDate,
+  end: endDate,
+});
+let formattedDuration = '';
+if (!!years) {
+  if (years === 1) {
+    formattedDuration += `${years} yr`;
+  } else {
+    formattedDuration += `${years} yrs`;
+  }
+}
+
+let finalMonths = months ?? 0;
+if (!!days) {
+  finalMonths++;
+}
+
+formattedDuration += ` ${finalMonths} mos`;
+formattedDuration.trim();
+---
+
+<article aria-label="job-experience" class="mb-4">
+  <h3 class="text-l font-bold uppercase">{title}</h3>
+  <p class="text-sm" aria-label="company">
+    <a class="inline-block underline" href={companyWebsite}>{companyName}</a>
+    <span class="mx-0.5/2">&middot;</span>
+    <span>{contractType}</span>
+    <span class="mx-0.5/2">&middot;</span>
+    <span>{workModel}</span>
+  </p>
+  <p class="text-sm" aria-label="duration">
+    <span>{format(startDate, 'MMM yyyy')} - {format(endDate, 'MMM yyyy')}</span>
+    <span class="mx-0.5/2">&middot;</span>
+    <span>{formattedDuration}</span>
+  </p>
+  <div class="pt-3 leading-relaxed" aria-label="description">
+    <slot />
+  </div>
+  <SkillsList class="mt-2 text-xs opacity-60" list={[skills]} />
+</article>
