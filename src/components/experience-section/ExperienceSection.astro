@@ -11,8 +11,8 @@ import Experience from './Experience.astro';
     companyWebsite="https://www.circl.solutions/"
     contractType="full-time"
     workModel="remote"
-    startDate={new Date(2023, 10)}
-    endDate={new Date(2024, 4)}
+    startDate={new Date(2023, 10, 30)}
+    endDate={new Date(2024, 3, 30)}
     skills={[
       'React.js',
       'TypeScript',
@@ -37,8 +37,8 @@ import Experience from './Experience.astro';
     companyWebsite="https://alviere.com/"
     contractType="full-time"
     workModel="remote"
-    startDate={new Date(2023, 3)}
-    endDate={new Date(2024, 9)}
+    startDate={new Date(2023, 3, 1)}
+    endDate={new Date(2023, 9, 30)}
     skills={[
       'React.js',
       'TypeScript',
@@ -79,8 +79,8 @@ import Experience from './Experience.astro';
     companyWebsite="https://alviere.com/"
     contractType="full-time"
     workModel="remote"
-    startDate={new Date(2021, 10)}
-    endDate={new Date(2023, 3)}
+    startDate={new Date(2021, 10, 1)}
+    endDate={new Date(2023, 3, 30)}
     skills={[
       'Team Management',
       'React.js',
@@ -102,5 +102,105 @@ import Experience from './Experience.astro';
     During this period my team implemented a major redesign of the whole app, built a number of custom
     components on top of MUI, integrated Storybook with Zeplin into the project, all while delivering
     new features in a SCRUM environment.
+  </Experience>
+
+  <Experience
+    title="Frontend Developer"
+    companyName="Alviere"
+    companyWebsite="https://alviere.com/"
+    contractType="full-time"
+    workModel="remote"
+    startDate={new Date(2020, 7, 1)}
+    endDate={new Date(2021, 10, 30)}
+    skills={[
+      'Greenfield Development',
+      'React.js',
+      'TypeScript',
+      'CSS',
+      'REST APIs',
+      'React-Query',
+      'Axios',
+      'Git',
+      'Unit Testing',
+    ]}
+  >
+    Rebuilding a 3 year old Angular app and from scratch using React + Typescript. This was my first
+    experience starting a greenfield project. At the time Create React App was still "cool" and
+    actively maintained so that's what I used. Material-UI 5 for components and styling.
+  </Experience>
+
+  <Experience
+    title="Web Developer"
+    companyName="Mezu"
+    companyWebsite="www.linkedin.com/company/mezu-inc"
+    contractType="full-time"
+    workModel="onsite"
+    startDate={new Date(2018, 8, 1)}
+    endDate={new Date(2020, 6, 30)}
+    skills={[
+      'Angular',
+      'TypeScript',
+      'NGRX',
+      'RxJS',
+      'CSS',
+      'REST APIs',
+      'Git',
+      'Unit Testing',
+      'Karma',
+      'Jasmine',
+      'MJML',
+      'Gulp',
+    ]}
+  >
+    Maintaining and adding features to a huge Angular 2 backoffice app. This was my first contact
+    with TypeScript which I absolutely loved and will never go back to vanilla JavaScript. Besides
+    that, I also:
+    <ul class="list-inside list-disc">
+      <li>added features to company's landing page</li>
+      <li>built hundreds of transactional email templates (MJML + gulp tasks)</li>
+    </ul>
+  </Experience>
+
+  <Experience
+    title="Web development intern"
+    companyName="dev2grow"
+    companyWebsite="https://www.dev2grow.com/"
+    contractType="internship"
+    workModel="onsite"
+    startDate={new Date(2018, 3, 1)}
+    endDate={new Date(2018, 6, 30)}
+    skills={[
+      'React.js',
+      'JavaScript',
+      'Redux',
+      'RxJS',
+      'Redux-observable',
+      'CSS',
+      'REST APIs',
+      'Git',
+    ]}
+  >
+    Mainly frontend development with React, including state management (redux) and libraries for
+    async tasks (redux-observable[RxJS]), among others.
+  </Experience>
+
+  <Experience
+    title="Web development intern"
+    companyName="comOn"
+    companyWebsite="https://www.dev2grow.com/"
+    contractType="internship"
+    workModel="onsite"
+    startDate={new Date(2017, 3, 1)}
+    endDate={new Date(2017, 7, 30)}
+    skills={['React.js', 'JavaScript', 'Meteor.js', 'Redux', 'HTML', 'CSS', 'REST APIs', 'Git']}
+  >
+    <p class="mb-2">
+      The projects I worked on here included design and development of a REST api, advanced Slack
+      integrations, also frontend programming and Chat Bot development using Google's <b>api.ai</b>.
+      The technology stack included Meteor, React and Redux, among other JavaScript libraries and
+      web apis.
+    </p>
+    A very rich experience that allowed me to expand my horizons of JavaScript development and discover
+    interesting stuff about Natural Language Processing.
   </Experience>
 </section>
