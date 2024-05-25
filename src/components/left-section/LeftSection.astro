@@ -4,6 +4,7 @@ import SectionTitle from '../typography/SectionTitle.astro';
 import LanguageSection from './language-section/LanguageSection.astro';
 import SkillsList from './skills/SkillsList.astro';
 import { hardSkills, softSkills } from './skills/skills';
+import SocialSection from './social-section/SocialSection.astro';
 
 interface Props {
   class: string;
@@ -13,7 +14,9 @@ const { class: classFromProps } = Astro.props;
 ---
 
 <div class={twMerge('bg-gray-200 dark:bg-black', classFromProps)}>
-  <section>
+  <SocialSection />
+
+  <section class="mt-10">
     <SectionTitle>Skills</SectionTitle>
 
     <SkillsList class="text-sm" list={hardSkills} />
