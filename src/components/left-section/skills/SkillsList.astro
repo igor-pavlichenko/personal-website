@@ -11,6 +11,8 @@ const { class: classFromProps, list } = Astro.props;
 ---
 
 <ul class={classFromProps}>
+  <!-- allows to insert a skill manually -->
+  <slot />
   {
     list.map((item) => {
       if (typeof item === 'string') return <Skill label={item} />;

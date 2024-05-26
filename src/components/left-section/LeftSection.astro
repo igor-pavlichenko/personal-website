@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge';
 import SectionTitle from '../typography/SectionTitle.astro';
 import InfoSection from './info-section/InfoSection.astro';
 import LanguageSection from './language-section/LanguageSection.astro';
+import Skill from './skills/Skill.astro';
 import SkillsList from './skills/SkillsList.astro';
 import { hardSkills, softSkills } from './skills/skills';
 
@@ -19,7 +20,10 @@ const { class: classFromProps } = Astro.props;
   <section class="mt-10">
     <SectionTitle>Skills</SectionTitle>
 
-    <SkillsList class="text-sm" list={hardSkills} />
+    <SkillsList class="text-sm" list={hardSkills}>
+      <Skill class="inline-flex" label="Golang" />
+      <span class="text-xs opacity-60">( learning... )</span><br />
+    </SkillsList>
     <SkillsList class="mt-4 text-sm" list={softSkills} />
   </section>
 
