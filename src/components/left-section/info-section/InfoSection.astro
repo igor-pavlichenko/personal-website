@@ -1,0 +1,36 @@
+---
+import EnvelopIcon from '../../../icons/EnvelopIcon.astro';
+import GithubIcon from '../../../icons/GithubIcon.astro';
+import LinkedinIcon from '../../../icons/LinkedinIcon.astro';
+import LocationIcon from '../../../icons/LocationIcon.astro';
+import SectionTitle from '../../typography/SectionTitle.astro';
+
+interface Props {
+  class?: string;
+}
+---
+
+<section class={Astro.props.class}>
+  <SectionTitle>Info</SectionTitle>
+
+  <ul class="flex flex-col gap-3.5 text-sm">
+    <li class="flex flex-row items-center gap-2 text-nowrap">
+      <LocationIcon class="w-5 min-w-5 fill-current" />
+      <span>Portugal</span>
+    </li>
+    <li class="flex flex-row items-center gap-2 text-nowrap">
+      <EnvelopIcon class="w-5 min-w-5 fill-current" />
+      <span class="">igor.o.pavlichenko</span> at <span class="">gmail.com</span>
+    </li>
+    <li class="flex flex-row items-center gap-2 text-nowrap">
+      <LinkedinIcon class="w-5 min-w-5 fill-current" />
+      <a class="" href="https://www.linkedin.com/in/igorpavlichenko/"
+        >linkedin.com/in/igorpavlichenko</a
+      >
+    </li>
+    <li class="flex flex-row items-center gap-2 text-nowrap">
+      <GithubIcon class="w-5 min-w-5 fill-current" />
+      <a class="" href="https://github.com/igor-pavlichenko">github.com/igor-pavlichenko</a>
+    </li>
+  </ul>
+</section>
